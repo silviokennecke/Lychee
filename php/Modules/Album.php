@@ -31,8 +31,8 @@ final class Album {
 		// Properties
 		$id       = generateID();
 		$sysstamp = time();
-		$public   = 0;
-		$visible  = 1;
+		$public   = 1;
+		$visible  = 0;
 
 		// Database
 		$query  = Database::prepare(Database::get(), "INSERT INTO ? (id, title, sysstamp, public, visible) VALUES ('?', '?', '?', '?', '?')", array(LYCHEE_TABLE_ALBUMS, $id, $title, $sysstamp, $public, $visible));
